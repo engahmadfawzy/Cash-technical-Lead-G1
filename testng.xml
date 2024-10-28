@@ -8,7 +8,7 @@
         <classes>
             <class name="com.unicorns.utilities.extent_report.ExtentReport"/>
             <class name="com.unicorns.pages.BasePage"/>
-<!--            <class name="com.unicorns.tests.register_scenarios.RegisterTestRunner"/>-->
+            <class name="com.unicorns.tests.register_scenarios.RegisterTestRunner"/>
 <!--            <class name="com.unicorns.tests.login_scenarios.LoginTestRunner"/>-->
             <class name="com.unicorns.tests.buyingKeyboard_scenarios.PurchaseRunner"/>
         </classes>
