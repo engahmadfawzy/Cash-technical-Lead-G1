@@ -49,26 +49,18 @@ public class ProductPage extends BasePage {
         findElement(productsButton).click();
     }
 
-//    public double getFristItemPrice(){
-//      String price1=findElement(firstItemPrice).getText() ;
-//        return Double.parseDouble(price1);
-//    }
-//    public double getSecondItemPrice() {
-//        String price2 = findElement(secondItemPrice).getText();
-//        return Double.parseDouble(price2);    }
-//
-//    public double getTotalItemsPrice() {
-//        String totalPrice = findElement(totalItemsPrice).getText().replaceAll("[^\\d.]", "");
-//        return Double.parseDouble(totalPrice);
-//    }
-
-    public double getItemPrice(By itemLocator) {
-        String price = findElement(itemLocator).getText().replaceAll("[^\\d.]", "");
-        return Double.parseDouble(price);
+    public double getFirstItemPrice() {
+        String price1 = findElement(firstItemPriceLocator).getText().replaceAll("[^\\d.]", "");
+        return Double.parseDouble(price1);
     }
-    public double firstItemPrice = getItemPrice(firstItemPriceLocator);
-    public double secondItemPrice = getItemPrice(secondItemPriceLocator);
-    public double totalItemsPrice = getItemPrice(totalItemsPriceLocator);
+    public double getSecondItemPrice() {
+        String price2 = findElement(secondItemPriceLocator).getText().replaceAll("[^\\d.]", "");
+        return Double.parseDouble(price2);
+    }
+    public double getTotalItemsPrice() {
+        String priceTotal = findElement(totalItemsPriceLocator).getText().replaceAll("[^\\d.]", "");
+        return Double.parseDouble(priceTotal);
+    }
 
     public void clickOnCheckoutButton(){
       findElement(checkoutButton).click();

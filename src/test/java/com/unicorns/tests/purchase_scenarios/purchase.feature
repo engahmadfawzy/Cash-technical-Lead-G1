@@ -26,5 +26,5 @@ Feature: purchase products
     Then validate that shipping details "<country>" and "<region>" and "<address>" and "<price>" are correct on confirmation page
 
     Examples:
-      | email             |password| category | productName                                               | category2 |productName2                 | country|region|address|zip  |phoneNumber| price |
-      | ahmed7@gmail.com  |Gmail@12| keyboard | Logitech Wireless Keyboard and Mouse Combo - Black (MK270)| laptop    |Dell Chromebook 11 3120 (11.6|Egypt   |Cairo |Maddi  |12111|01004427827| 733   |
+      | email               |password| category | productName                                                         | category2 |productName2   |country |region|address|zip  |phoneNumber| price |
+      | ahmed7@gmail.com    |Gmail@12 | keyboard | Logitech Wireless Keyboard and Mouse Combo - Black (MK270)         | laptop    |Dell Chromebook|Egypt   |Cairo |Maddi  |12111|01004427827| 462   |

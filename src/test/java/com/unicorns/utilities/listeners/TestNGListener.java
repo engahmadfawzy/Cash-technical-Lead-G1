@@ -19,7 +19,7 @@ public class TestNGListener implements IAlterSuiteListener, ITestListener {
     @Override
     public void onTestFailure(ITestResult Result)
     {
-        ExtentReport.getTest().log(Status.FAIL ,Result.getThrowable());
+       // ExtentReport.getTest().log(Status.FAIL ,Result.getThrowable());
     }
 
     @Override

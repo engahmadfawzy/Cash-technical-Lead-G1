@@ -27,6 +27,7 @@ public class RegisterStepDef extends BaseTest {
     @Then("validate that logout button is visible on home page")
     public void validateThatLogoutButtonIsVisibleOnHomePage() {
         Assert.assertTrue(browser.unicorns.home.isLogoutButtonDisplayed(),"logout Button is not displayed");
+
     }
 
 }

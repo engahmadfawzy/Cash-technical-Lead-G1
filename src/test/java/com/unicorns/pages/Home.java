@@ -19,6 +19,8 @@ public class Home extends BasePage{
     }
 
     public void clickOnLoginButton() {
+        clickOnProfileButton();
+        findElement(logoutButton).click();
         findElement(loginButton).click();
     }
 

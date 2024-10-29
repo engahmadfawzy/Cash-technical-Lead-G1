@@ -65,10 +65,10 @@ public class PurchaseStepDef extends BaseTest {
 
     @Then("validate that the total price is correct")
     public void validateThatTheTotalPriceIsCorrect() {
-        System.out.println(browser.unicorns.productPage.firstItemPrice);
-        System.out.println(browser.unicorns.productPage.secondItemPrice);
-        System.out.println(browser.unicorns.productPage.totalItemsPrice);
-        Assert.assertEquals(browser.unicorns.productPage.firstItemPrice+browser.unicorns.productPage.secondItemPrice,browser.unicorns.productPage.totalItemsPrice,0.0);
+        System.out.println(browser.unicorns.productPage.getFirstItemPrice());
+        System.out.println(browser.unicorns.productPage.getSecondItemPrice());
+        System.out.println(browser.unicorns.productPage.getSecondItemPrice());
+        Assert.assertEquals(browser.unicorns.productPage.getFirstItemPrice()+browser.unicorns.productPage.getSecondItemPrice(),browser.unicorns.productPage.getTotalItemsPrice(),0.0);
     }
 
     @And("user click on product {string}")

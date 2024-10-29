@@ -3,7 +3,7 @@ import org.openqa.selenium.By;
 
 public class Confirmation extends BasePage {
 
-    private By orderNumber =By.cssSelector("h3.panel-title");
+    private By orderNumber =By.xpath("(//h3[@class='panel-title'])[1]");
     private By totalField =By.xpath("//*[contains(text(),'Total')]");
 
     public Boolean confirmShippingDetails(String detail){

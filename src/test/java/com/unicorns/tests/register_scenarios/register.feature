@@ -10,4 +10,4 @@ Feature: Register
 
     Examples:
       |username|   email            |   password  | gender|
-      | Ahmed  | ahmed2021@gmail.com|  Test@123   | Male  |
+      | Ahmed  | ahmed2024@gmail.com|  Test@123   | Male  |
