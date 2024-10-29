@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 1.734 s <<< FAILURE! - in TestSuite
-startReport(com.unicorns.utilities.extent_report.ExtentReport)  Time elapsed: 1.141 s  <<< FAILURE!
-java.lang.IllegalArgumentException: InputStream cannot be null
-	at com.unicorns.utilities.extent_report.ExtentReport.startReport(ExtentReport.java:42)
-

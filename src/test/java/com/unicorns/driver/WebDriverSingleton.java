@@ -1,6 +1,5 @@
 package com.unicorns.driver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,13 +23,10 @@ public class WebDriverSingleton {
 
     private void setDriverCapabilities(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
-            System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
             webDriver = new ChromeDriver(chromeOptions);
         } else if (browserName.equalsIgnoreCase("edge")) {
-            System.setProperty("webdriver.edge.driver","resources/msedgedriver.exe");
             webDriver = new EdgeDriver();
         }
     }

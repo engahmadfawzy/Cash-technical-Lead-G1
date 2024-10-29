@@ -1,0 +1,10 @@
+.idea
+.idea/*
+reports
+reports/*
+target
+target/*
+*.iml
+resources/reports
+resources/reports/*
+

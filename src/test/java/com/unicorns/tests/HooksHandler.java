@@ -18,16 +18,16 @@ public class HooksHandler extends BaseTest {
     String unicornsLink;
 
     @Before(order = 1)
-    public void setUp() throws InterruptedException, IOException {
+    public void setUpBrowser() throws InterruptedException, IOException {
+        properties = ReadPropertiesFile.setProperties();
         driver = WebDriverSingleton.getDriverSingleton();
         driver.resetCache();
         driver.maximizeWindow();
 
-        properties = ReadPropertiesFile.setProperties();
         unicornsLink = properties.getProperty("unicornsLink");
         driver.navigateTo(unicornsLink);
-
     }
+
     @Before(order = 1)
     public void startTCHooks(Scenario scenario) {
         ExtentReport.setScenario(scenario);
@@ -37,6 +37,7 @@ public class HooksHandler extends BaseTest {
     public void setStepDefs() throws NoSuchFieldException, IllegalAccessException {
         ExtentReport.setStepDefs();
     }
+
     @AfterStep()
     public void
     afterStep(Scenario scenario) {
@@ -61,15 +62,15 @@ public class HooksHandler extends BaseTest {
     }
 
     @After(order = 0)
-    public void tearDownSiebel() throws InterruptedException {
+    public void tearDown() throws InterruptedException {
         driver.resetCache();
         closeWebDriverAfterAllTestsHook();
     }
 
     private void closeWebDriverAfterAllTestsHook() {
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            WebDriverSingleton.close();
-        }));
+        Runtime.getRuntime().addShutdownHook(
+                new Thread(() -> {
+                    WebDriverSingleton.close();
+                }));
     }
-
 }

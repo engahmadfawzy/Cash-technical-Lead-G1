@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <listeners>
+        <listener class-name="com.unicorns.utilities.listeners.TestNGListener"/>
+    </listeners>
+    <test name="Unicorns Task Web Report">
+        <classes>
+            <class name="com.unicorns.utilities.extent_report.ExtentReport"/>
+            <class name="com.unicorns.pages.BasePage"/>
+            <class name="com.unicorns.tests.api_brands_tests.BrandsApiRunner"/>
+            <class name="com.unicorns.tests.register_scenarios.RegisterTestRunner"/>
+            <class name="com.unicorns.tests.purchase_scenarios.PurchaseRunner"/>
+        </classes>
+    </test>
+</suite>

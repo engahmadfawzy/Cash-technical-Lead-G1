@@ -9,5 +9,5 @@ Feature: Register
 
 
     Examples:
-      |username|   email           |   password  | gender|
-      | Ahmed  | ahmed212@gmail.com|  Test@123   | Male  |
+      |username|   email            |   password  | gender|
+      | Ahmed  | ahmed2021@gmail.com|  Test@123   | Male  |
